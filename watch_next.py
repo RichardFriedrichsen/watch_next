@@ -1,5 +1,5 @@
 import spacy
-nlp = spacy.load('en_core_web_lg')
+nlp = spacy.load('en_core_web_md')
 
 # Gloabl variable: The score of the movie most similar
 similarity_num = 0 
@@ -36,14 +36,14 @@ def movie_suggestions(description):
                 similarity_num = similarity_score
                 index = i
         
-        print(index)
-        print(similarity_num)
-        print(sentences[index])
+        print(f"\nIndex of most similar sentence: {index}\n")
+        print(f"Similarity as float: {similarity_num}\n")
+        print(f"Sentence with highest similarity:\n {sentences[index]}\n")
 
         # Splitting the title from the most similar movie and returning it
         title = sentences[index].rsplit(':')
 
-        print(title[0])
+        print(f"Title: {title[0]}")
         return title[0]
 
 
