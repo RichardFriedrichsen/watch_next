@@ -1,14 +1,21 @@
 import spacy
 nlp = spacy.load('en_core_web_lg')
-similarity_num = 0
-index = 0
+
+# Gloabl variable: The score of the movie most similar
+similarity_num = 0 
+
+# Global variable: The index of the most similar movie from movies.txt list
+index = 0   
 
 def movie_suggestions(description):
-    ''' Function takes in a description and returns a movie suggestion
-
-    args: 
-    return:
-    '''
+    """Function takes in a description and returns a movie suggestion description
+    :param description: Description of last viewed movie
+    :type description: string
+    ...
+    ...
+    :return: title[0]: The title of the most similar movie
+    :rtype: string
+"""
     global index
     global similarity_num
 
@@ -32,7 +39,12 @@ def movie_suggestions(description):
         print(index)
         print(similarity_num)
         print(sentences[index])
-        return sentences[index]
+
+        # Splitting the title from the most similar movie and returning it
+        title = sentences[index].rsplit(':')
+
+        print(title[0])
+        return title[0]
 
 
 
