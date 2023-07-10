@@ -4,8 +4,9 @@ This is an appn that returns the title of a movie that the user is most likely t
 
 Table of Contents:
 
-Installation & Usage
-Author
+-Installation
+-Usage
+-Author
 
 
 Installation:
@@ -23,6 +24,7 @@ Installation:
     By running the below docker command the requirements in the requirements.txt automatically get installed.
 
 Usuage:
+
     Running Locally:
     Change directory into installation folder and run:
 
